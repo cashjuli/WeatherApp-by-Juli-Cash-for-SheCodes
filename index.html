@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style2.css" />
+    <link
+      rel="icon"
+      type="text/html"
+      href="media/365850-weather/png/031-rainbow.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/8c9bb54195.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quantico&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <div class="vintageshadow">
+      <div class="container mycard">
+        <div class="falsetab d-flex justify-content-end">
+          <i class="fas fa-times falseclose"></i>
+        </div>
+        <div class="row content">
+          <div class="col-sm currentcity">
+            <h1>
+              Barcelona
+            </h1>
+            <p class="todayinfo">
+             <span class="current-status"> Raining </span>- <span id="current-date"> </id>.
+            </p>
+
+            <img
+              src="media/365850-weather/png/031-rain.png"
+              alt="Raining"
+              class="currentimage"
+            />
+            <h2 class="currenttemperature">
+              <strong><span class="current-value">20</span><span class="current-unit">ºC</span> </strong><span class="new-unit"> /ºF</span>
+            </h2>
+          </div>
+          <div class="col-sm">
+            <form class="change-city">
+              <div class="row">
+                <div class="col-8">
+                  <input
+                    type="text"
+                    placeholder="Change city..."
+                    autocomplete="off"
+                    autofocus="on"
+                    class="change-city-imput"
+                  />
+                  
+                </div>
+                <div class="col-sm">
+                  <input type="submit" value="Go!" class="change-city-button" />
+                  
+                </div>
+              </div>
+            </form>
+            <br>
+            <div class="row">
+              <div class="col-8">
+            <ul class="moredetails">
+              <li>
+                <img
+                  src="media/365850-weather/png/031-umbrella.png"
+                  alt="Umbrella Image"
+                  class="detailsicons"
+                />
+                Chance of rain: <span class="chance-of-rain"></span>%
+              </li>
+              <li>
+                <img
+                  class="detailsicons"
+                  src="media/365850-weather/png/031-humidity.png"
+                  alt="Drop Image"
+                />
+                Humidity: <span class=humidity></span>%
+              </li>
+              <li>
+                <img
+                  src="media/365850-weather/png/031-wind.png"
+                  alt="Wind Image"
+                  class="detailsicons"
+                />
+                Wind: <span class=wind-speed></span> km/h
+              </li>
+            </ul>
+            </div>
+            <div class="col-sm">
+              <button class="your-location">Your city</button>
+            </div>
+          </div>
+
+            <div class="row followingdaystable">
+              <div class="col followingdayscol">
+                <p id="followingdays-first">Tomorrow</p>
+                <img
+                  src="media/365850-weather/png/031-rain-1.png"
+                  alt="Raining"
+                  class="followingdaysimage"
+                />
+                <p><strong><span class="current-value"></span></strong>/<span class="current-value"></span><span class="current-unit">ºC</span></p>
+              </div>
+              <div class="col followingdayscol">
+                <p id="followingdays-second"></p>
+                <img
+                  src="media/365850-weather/png/031-cloud.png"
+                  alt="Raining"
+                  class="followingdaysimage"
+                />
+                <p><strong><span class="current-value"></span></strong>/<span class="current-value"></span><span class="current-unit">ºC</span></p>
+              </div>
+              <div class="col followingdayscol">
+                <p id="followingdays-third"></p>
+                <img
+                  src="media/365850-weather/png/
+031-sun.png"
+                  alt="Raining"
+                  class="followingdaysimage"
+                />
+                <p><strong><span class="current-value"></span></strong>/<span class="current-value"></span><span class="current-unit">ºC</span></p>
+              </div>
+              <div class="col followingdayscol">
+                <p id="followingdays-fourth"></p>
+                <img
+                  src="media/365850-weather/png/
+031-sun.png"
+                  alt="Raining"
+                  class="followingdaysimage"
+                />
+                <p><strong><span class="current-value"></span></strong>/<span class="current-value"></span><span class="current-unit">ºC</span></p>
+              </div>
+              <div class="col followingdayscol">
+                <p id="followingdays-fifth"></p>
+                <img
+                  src="media/365850-weather/png/
+031-sun.png"
+                  alt="Raining"
+                  class="followingdaysimage"
+                />
+                <p><strong><span class="current-value"></span></strong>/<span class="current-value"></span><span class="current-unit">ºC</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Coded by Juli Cash
+      <br />
+      Icons design by
+      <a href="https://www.flaticon.es/autores/freepik" title="Freepik"
+        >Freepik</a
+      >
+      from
+      <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+    </footer>
+    <!--End of body-->
+    <script src="src/script.js"></script>
+  </body>
+</html>

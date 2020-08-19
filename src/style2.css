@@ -1,0 +1,165 @@
+.vintageshadow {
+  width: fit-content;
+  display: flex;
+  background-image: url(../media/123.jpg);
+  background-repeat: repeat;
+  padding-right: 2%;
+  padding-bottom: 2%;
+
+  margin: 5% auto;
+}
+
+.falsetab {
+  background-color: #83deee;
+  border-bottom: 1px solid #251f44;
+}
+.falseclose {
+  background-color: #f54291;
+  border-left: 1px solid #251f44;
+  padding: 0 3px;
+}
+.mycard {
+  padding: 0;
+  background-color: #ffe0f7;
+  max-width: 700px;
+  border: 1px solid #251f44;
+  margin-left: -2%;
+  margin-top: -2%;
+}
+.content {
+  margin: 2%;
+}
+
+h1,
+h2,
+.change-city-button,
+.your-location {
+  font-family: "Press Start 2P", sans-serif;
+  text-transform: capitalize;
+}
+
+.todayinfo,
+.moredetails,
+.followingdaystable,
+.change-city-imput {
+  font-family: "Quantico", sans-serif;
+  text-transform: capitalize;
+}
+
+.currentcity {
+  padding: 0;
+}
+
+h1 {
+  font-size: 25px;
+  padding: 3% 0;
+}
+h2 {
+  font-size: 20px;
+  padding: 3%;
+}
+
+p {
+  font-size: 11px;
+  text-align: center;
+  margin: 5% auto;
+}
+.todayinfo {
+  font-size: 15px;
+  text-align: left;
+}
+.currentimage {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+}
+.currenttemperature {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-unit {
+  border: 2px solid #251f44;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  background-color: #c4fb6d;
+  transition: all 100ms linear;
+  cursor: pointer;
+  padding: 3px;
+}
+.new-unit:hover {
+  background-color: #f54291;
+  border-top: 3px solid #f54291;
+  border-left: 3px solid #f54291;
+}
+
+.change-city-imput {
+  border: 2px solid #251f44;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+}
+.change-city-imput:focus {
+  outline-style: initial;
+}
+
+.change-city-button {
+  border: 2px solid #251f44;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  background-color: #c4fb6d;
+  transition: all 100ms linear;
+}
+.change-city-button:hover {
+  background-color: #f54291;
+  border-top: 3px solid #f54291;
+  border-left: 3px solid #f54291;
+}
+
+.your-location {
+  border: 2px solid #251f44;
+  border-top: 3px solid #f54291;
+  border-left: 3px solid #f54291;
+  background-color: #f54291;
+  transition: all 100ms linear;
+  font-size: 10px;
+}
+.your-location:hover {
+  background-color: #c4fb6d;
+  border: 2px solid #251f44;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+}
+
+.moredetails {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 5% 0;
+}
+.detailsicons {
+  width: 20px;
+}
+.followingdayscol {
+  border: 1px dashed #251f44;
+  border-right: none;
+  padding: 0;
+}
+.followingdaystable {
+  border-right: 1px dashed #251f44;
+  background-color: #faeee7;
+}
+
+.followingdays {
+  font-size: 11px;
+  text-align: center;
+  margin: 0;
+}
+
+.followingdaysimage {
+  display: block;
+  margin: 10% auto;
+  width: 50%;
+}
+
+footer {
+  text-align: center;
+}
