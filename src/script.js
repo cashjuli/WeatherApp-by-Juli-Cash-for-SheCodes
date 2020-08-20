@@ -20,6 +20,8 @@ function displayTheWeather(result) {
   let humidityValue = result.data.list[0].main.humidity;
   let windSpeed = document.querySelector(".wind-speed");
   let windSpeedValue = result.data.list[0].wind.speed;
+  let currentIcon = document.querySelector(".currentimage");
+  let currentIconValue = result.data.list[0].weather.icon;
 
   currentValue[0].innerHTML = `${temperatureNow}`;
   currentValue[1].innerHTML = `${maxTomorrow}`;
@@ -36,6 +38,10 @@ function displayTheWeather(result) {
   chanceOfRain.innerHTML = `${chanceOfRainValue}`;
   humidity.innerHTML = `${humidityValue}`;
   windSpeed.innerHTML = `${windSpeedValue}`;
+  currentIcon.setAttribute(
+    src,
+    `media/365850-weather/png/${currentIconValue}.png`
+  );
 }
 
 function runApi() {
