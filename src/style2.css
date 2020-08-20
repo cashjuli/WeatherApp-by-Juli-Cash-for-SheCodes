@@ -154,7 +154,11 @@ p {
   margin: 0;
 }
 
-.followingdaysimage {
+.followingdaysimage-first,
+.followingdaysimage-second,
+.followingdaysimage-third,
+.followingdaysimage-fourth,
+.followingdaysimage-fifth {
   display: block;
   margin: 10% auto;
   width: 50%;
