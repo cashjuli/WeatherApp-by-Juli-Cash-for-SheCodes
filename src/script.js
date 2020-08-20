@@ -21,7 +21,17 @@ function displayTheWeather(result) {
   let windSpeed = document.querySelector(".wind-speed");
   let windSpeedValue = result.data.list[0].wind.speed;
   let currentIcon = document.querySelector(".currentimage");
-  let currentIconValue = result.data.list[0].weather.icon;
+  let currentIconValue = result.data.list[0].weather[0].icon;
+  let firstIcon = document.querySelector(".followingdaysimage-first");
+  let firstIconValue = result.data.list[7].weather[0].icon;
+  let secondIcon = document.querySelector(".followingdaysimage-second");
+  let secondIconValue = result.data.list[15].weather[0].icon;
+  let thirdIcon = document.querySelector(".followingdaysimage-third");
+  let thirdIconValue = result.data.list[23].weather[0].icon;
+  let fourthIcon = document.querySelector(".followingdaysimage-fourth");
+  let fourthIconValue = result.data.list[31].weather[0].icon;
+  let fifthIcon = document.querySelector(".followingdaysimage-fifth");
+  let fifthIconValue = result.data.list[39].weather[0].icon;
 
   currentValue[0].innerHTML = `${temperatureNow}`;
   currentValue[1].innerHTML = `${maxTomorrow}`;
@@ -39,8 +49,29 @@ function displayTheWeather(result) {
   humidity.innerHTML = `${humidityValue}`;
   windSpeed.innerHTML = `${windSpeedValue}`;
   currentIcon.setAttribute(
-    src,
+    "src",
     `media/365850-weather/png/${currentIconValue}.png`
+  );
+  currentIcon.setAttribute("alt", currentStatus);
+  firstIcon.setAttribute(
+    "src",
+    `media/365850-weather/png/${firstIconValue}.png`
+  );
+  secondIcon.setAttribute(
+    "src",
+    `media/365850-weather/png/${secondIconValue}.png`
+  );
+  thirdIcon.setAttribute(
+    "src",
+    `media/365850-weather/png/${thirdIconValue}.png`
+  );
+  fourthIcon.setAttribute(
+    "src",
+    `media/365850-weather/png/${fourthIconValue}.png`
+  );
+  fifthIcon.setAttribute(
+    "src",
+    `media/365850-weather/png/${fifthIconValue}.png`
   );
 }
 
