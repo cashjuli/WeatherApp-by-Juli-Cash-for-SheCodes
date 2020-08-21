@@ -1,3 +1,8 @@
+.weatherapp {
+  max-width: 600px;
+  margin: 5% auto;
+}
+
 .vintageshadow {
   width: fit-content;
   display: flex;
@@ -9,6 +14,14 @@
   margin: 5% auto;
 }
 
+.mycard {
+  padding: 0;
+  background-color: #ffe0f7;
+  width: fit-content;
+  border: 1px solid #251f44;
+  margin-left: -2%;
+  margin-top: -2%;
+}
 .falsetab {
   background-color: #83deee;
   border-bottom: 1px solid #251f44;
@@ -17,14 +30,6 @@
   background-color: #f54291;
   border-left: 1px solid #251f44;
   padding: 0 3px;
-}
-.mycard {
-  padding: 0;
-  background-color: #ffe0f7;
-  max-width: 700px;
-  border: 1px solid #251f44;
-  margin-left: -2%;
-  margin-top: -2%;
 }
 .content {
   margin: 2%;
@@ -67,6 +72,7 @@ p {
 .todayinfo {
   font-size: 15px;
   text-align: left;
+  margin-top: 0;
 }
 .currentimage {
   display: block;
@@ -91,6 +97,10 @@ p {
   background-color: #f54291;
   border-top: 3px solid #f54291;
   border-left: 3px solid #f54291;
+}
+
+.change-city {
+  margin-bottom: 0.5rem;
 }
 
 .change-city-imput {
@@ -134,10 +144,16 @@ p {
   list-style-type: none;
   padding-left: 0;
   margin: 5% 0;
+  font-size: 14px;
 }
 .detailsicons {
   width: 20px;
 }
+
+.moredetails-currentcity {
+  margin-bottom: 0.5rem;
+}
+
 .followingdayscol {
   border: 1px dashed #251f44;
   border-right: none;

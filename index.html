@@ -27,6 +27,7 @@
     <title>WeatherApp</title>
   </head>
   <body>
+    <div class="weatherapp">
     <div class="vintageshadow">
       <div class="container mycard">
         <div class="falsetab d-flex justify-content-end">
@@ -38,7 +39,9 @@
               Barcelona
             </h1>
             <p class="todayinfo">
-             <span class="current-status">  </span>- <span id="current-date"> </id>.
+             <span class="current-status">  </span>
+             <br>
+             <span id="current-date"> </id>.
             </p>
 
             <img
@@ -50,6 +53,7 @@
               <strong><span class="current-value">20</span><span class="current-unit">ºC</span> </strong><span class="new-unit"> /ºF</span>
             </h2>
           </div>
+          
           <div class="col-sm">
             <form class="change-city">
               <div class="row">
@@ -69,8 +73,8 @@
                 </div>
               </div>
             </form>
-            <br>
-            <div class="row">
+            
+            <div class="row moredetails-currentcity">
               <div class="col-8">
             <ul class="moredetails">
               <li>
@@ -165,6 +169,7 @@
       from
       <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
     </footer>
+    </div>
     <!--End of body-->
     <script src="src/script.js"></script>
   </body>
