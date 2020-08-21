@@ -98,7 +98,7 @@ runApi();
 function changeToYourCity(results) {
   let h1 = document.querySelector("h1");
 
-  h1.innerHTML = `${results.data.name}`;
+  h1.innerHTML = ` <img src="media/365850-weather/png/ubicacion.png" alt="positioning-icon" width=25px class="position"/> ${results.data.name}`;
   runApi();
 }
 
