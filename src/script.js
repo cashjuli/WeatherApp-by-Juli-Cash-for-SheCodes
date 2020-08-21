@@ -22,6 +22,9 @@ function displayTheWeather(result) {
   let windSpeedValue = result.data.list[0].wind.speed;
   let currentIcon = document.querySelector(".currentimage");
   let currentIconValue = result.data.list[0].weather[0].icon;
+  if (currentIconValue === "01n") {
+    currentIconValue = "night";
+  }
   let firstIcon = document.querySelector(".followingdaysimage-first");
   let firstIconValue = result.data.list[7].weather[0].icon;
   let secondIcon = document.querySelector(".followingdaysimage-second");
