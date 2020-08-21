@@ -167,15 +167,41 @@ followingFourth.innerHTML = `${calculateDays(4)}`;
 followingFifth.innerHTML = `${calculateDays(5)}`;
 
 //search engine
+function displayTheCity(result) {
+  let cityToSearch = result.data.name;
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = citySearch;
+  runApi();
+}
+
+function error() {
+  if (error) {
+    alert(
+      `👾 Oops! We don't recognize that location! Please, check the spelling, and rembember you should imput the city name in English`
+    );
+  }
+}
+
+function validateUserImput() {
+  let city = document.querySelector(".change-city-imput").value;
+  let apiKey = `397814a0e3bfa6c63a4e98c59df0047f`;
+  let unit = "metric";
+  let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather`;
+  let apiUrl = `${apiEndPoint}?q=${city}&units=${unit}&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(displayTheCity).catch(error);
+}
+
 function searchCity(event) {
   event.preventDefault();
   let userImput = document.querySelector(".change-city-imput");
-  let h1 = document.querySelector("h1");
-  if (userImput.value.length > 0) {
-    h1.innerHTML = `${userImput.value}`;
-    runApi();
+
+  if (userImput.value.length <= 0) {
+    alert(
+      `Looks like you didn't type anything 👁‍🗨👁‍🗨. Please, write the name of your location in the Change City area.`
+    );
   } else {
-    alert(`Please, write the name of your city in the Change City area.`);
+    validateUserImput();
   }
 }
 
