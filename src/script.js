@@ -170,7 +170,7 @@ followingFifth.innerHTML = `${calculateDays(5)}`;
 function displayTheCity(result) {
   let cityToSearch = result.data.name;
   let h1 = document.querySelector("h1");
-  h1.innerHTML = citySearch;
+  h1.innerHTML = cityToSearch;
   runApi();
 }
 
