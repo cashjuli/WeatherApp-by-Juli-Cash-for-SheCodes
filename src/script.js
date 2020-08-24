@@ -15,11 +15,11 @@ function displayTheWeather(result) {
   let currentStatus = document.querySelector(".current-status");
   let status = result.data.list[0].weather[0].description;
   let chanceOfRain = document.querySelector(".chance-of-rain");
-  let chanceOfRainValue = result.data.list[0].pop * 100;
+  let chanceOfRainValue = Math.round(result.data.list[0].pop * 100);
   let humidity = document.querySelector(".humidity");
-  let humidityValue = result.data.list[0].main.humidity;
+  let humidityValue = Math.round(result.data.list[0].main.humidity);
   let windSpeed = document.querySelector(".wind-speed");
-  let windSpeedValue = result.data.list[0].wind.speed;
+  let windSpeedValue = Math.round(result.data.list[0].wind.speed);
   let currentIcon = document.querySelector(".currentimage");
   let currentIconValue = result.data.list[0].weather[0].icon;
   if (currentIconValue === "01n") {
@@ -55,32 +55,37 @@ function displayTheWeather(result) {
     "src",
     `media/365850-weather/png/${currentIconValue}.png`
   );
-  currentIcon.setAttribute("alt", currentStatus);
+  currentIcon.setAttribute("alt", `${currentStatus} image`);
   firstIcon.setAttribute(
     "src",
     `media/365850-weather/png/${firstIconValue}.png`
   );
+  firstIcon.setAttribute("alt", `${firstIconValue} image`);
   secondIcon.setAttribute(
     "src",
     `media/365850-weather/png/${secondIconValue}.png`
   );
+  secondIcon.setAttribute("alt", `${secondIconValue} image`);
   thirdIcon.setAttribute(
     "src",
     `media/365850-weather/png/${thirdIconValue}.png`
   );
+  thirdIcon.setAttribute("alt", `${thirdIconValue} image`);
   fourthIcon.setAttribute(
     "src",
     `media/365850-weather/png/${fourthIconValue}.png`
   );
+  fourthIcon.setAttribute("alt", `${fourthIconValue} image`);
   fifthIcon.setAttribute(
     "src",
     `media/365850-weather/png/${fifthIconValue}.png`
   );
+  fifthIcon.setAttribute("alt", `${fifthIconValue} image`);
 }
 
 function runApi() {
   let apiKey = `397814a0e3bfa6c63a4e98c59df0047f`;
-  let city = document.querySelector("h1").innerHTML.trim();
+  let city = document.querySelector(".the-city").innerHTML.trim();
   let unit = "metric";
   let newUnit = document.querySelector(".new-unit");
   if (newUnit.innerHTML === ` /ºC`) {
@@ -96,9 +101,10 @@ runApi();
 
 //current Location
 function changeToYourCity(results) {
-  let h1 = document.querySelector("h1");
-
-  h1.innerHTML = ` <img src="media/365850-weather/png/ubicacion.png" alt="positioning-icon" width=25px class="position"/> ${results.data.name}`;
+  let icon = document.querySelector(".the-city-icon");
+  let city = document.querySelector(".the-city");
+  icon.innerHTML = ` <img src="media/365850-weather/png/ubicacion.png" alt="positioning-icon" width=25px class="position"/>`;
+  city.innerHTML = `${results.data.name}`;
   runApi();
 }
 
@@ -169,8 +175,8 @@ followingFifth.innerHTML = `${calculateDays(5)}`;
 //search engine
 function displayTheCity(result) {
   let cityToSearch = result.data.name;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = cityToSearch;
+  let theCity = document.querySelector(".the-city");
+  theCity.innerHTML = cityToSearch;
   runApi();
 }
 
